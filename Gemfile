@@ -7,9 +7,12 @@ end
 
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.4'
+gem 'rack-cors', require: 'rack/cors'
+gem 'rest-client'
 
 group :development, :test do
   gem 'database_cleaner', '1.6.1'
+  gem 'dotenv-rails'
   gem 'factory_girl_rails', '4.8.0'
   gem 'faker', '1.8.4'
   gem 'rails-controller-testing', '1.0.2'
@@ -19,6 +22,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
